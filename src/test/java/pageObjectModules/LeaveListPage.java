@@ -26,18 +26,23 @@ public class LeaveListPage {
     public void leaveListPage() {
         driver.findElement(leaveTab).click();
     }
+
     public void clickCheckboxAll() {
         driver.findElement(checkAll).click();
     }
+
     public void clickSearchButton() {
         driver.findElement(searchButton).click();
     }
+
     public void confirmNameDisplayed(AssignLeave assignLeave) {
         assert (driver.findElement(searchName).getText().equals(assignLeave.getCompleteName()));
     }
+
     public void nameNotFound() {
         assert (driver.findElement(searchTable).getText().equals(NO_RECORDS_FOUND.getText()));
     }
+
     public void clickDropdownAction() {
         WebElement staticDropdown = driver.findElement(leaveActionDropdown);
         Select selectDropdown = new Select(staticDropdown);
@@ -46,6 +51,7 @@ public class LeaveListPage {
         Actions actions = new Actions(driver);
         actions.moveToElement(element).click().build().perform();
     }
+
     public void clickSaveButton() {
         driver.findElement(saveButton).click();
     }

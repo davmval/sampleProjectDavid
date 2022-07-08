@@ -7,7 +7,6 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(features = "@target/failed_scenarios.txt", glue = "stepDefinitions", monochrome = true)
 public class FailedTestRunner extends AbstractTestNGCucumberTests {
-
 	@Override
 	@DataProvider(parallel = false)
 	public Object[][] scenarios() {

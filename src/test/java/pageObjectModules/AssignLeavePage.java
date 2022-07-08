@@ -15,7 +15,6 @@ public class AssignLeavePage {
         this.driver = driver;
     }
 
-    //******Scenario: admin adds a new employee leave******
     private final By leave = By.xpath("//b[normalize-space()='Leave']");
     private final By assignLeave = By.xpath("//a[@id='menu_leave_assignLeave']");
     private final By employeeName = By.xpath("//input[@name='assignleave[txtEmployee][empName]']");
@@ -31,6 +30,7 @@ public class AssignLeavePage {
         driver.findElement(leave).click();
         driver.findElement(assignLeave).click();
     }
+
     public void inputEmployeeName(String firstName) {
         driver.findElement(employeeName).sendKeys(firstName);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
@@ -38,9 +38,11 @@ public class AssignLeavePage {
         Actions actions = new Actions(driver);
         actions.moveToElement(element).click().build().perform();
     }
+
     public void inputLeaveType() {
         driver.findElement(leaveType).click();
     }
+
     public void leaveDropdownMenu() {
         WebElement staticDropdown = driver.findElement(leaveTypeDropdown);
         Select selectDropdown = new Select(staticDropdown);
@@ -49,16 +51,19 @@ public class AssignLeavePage {
         Actions actions = new Actions(driver);
         actions.moveToElement(element).click().build().perform();
     }
+
     public void calendarSelect() {
         driver.findElement(txtFromDate).click();
         driver.findElement(fromDate).click();
     }
+
     public void enterInfo(AssignLeave assignLeave) {
         inputEmployeeName(assignLeave.getCompleteName());
         inputLeaveType();
         leaveDropdownMenu();
         calendarSelect();
     }
+
     public void clickAssignButton() throws InterruptedException {
         WebElement element = driver.findElement(assignButton);
         Actions action = new Actions(driver);
@@ -70,6 +75,7 @@ public class AssignLeavePage {
         wait.until(ExpectedConditions.visibilityOfElementLocated(assignButton)).click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
+
     public void confirmLeave() {
         driver.findElement(confirmationButton).click();
     }

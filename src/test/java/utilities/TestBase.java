@@ -1,11 +1,9 @@
 package utilities;
 
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -36,21 +34,4 @@ public class TestBase {
 		prop.load(fis);
 		return prop;
 	}
-	
-	/*public void setProperties(String properties, String value) {
-		Properties prop = new Properties();
-		try {
-	        final FileInputStream fis = new FileInputStream(path + "\\src\\test\\resources\\global.properties");
-	        prop.load(fis);
-	        fis.close();
-	        prop.setProperty(properties, value);
-	        final FileOutputStream output = new FileOutputStream(path + "\\src\\test\\resources\\global.properties");
-	        prop.store(output, "");
-	        output.close();
-	    } catch (IOException ex) {
-	        ex.printStackTrace();
-	    }
-	}*/
-	
-
 }
