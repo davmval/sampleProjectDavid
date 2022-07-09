@@ -2,10 +2,10 @@ package utilities;
 
 public enum ErrorMsgs {
     USERNAME_EMPTY("Username cannot be empty"),
-    INVALID_CREDENTIALS("Invalid credentials"),
-    NO_RECORDS_FOUND("No Records Found");
+    INVALID_CREDENTIALS("Invalid credentials");
 
     private final String text;
+
     ErrorMsgs(String text){
         this.text = text;
     }

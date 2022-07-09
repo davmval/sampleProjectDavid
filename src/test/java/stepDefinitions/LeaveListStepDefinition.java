@@ -34,8 +34,7 @@ public class LeaveListStepDefinition {
 
     @When("admin applies the cancel action")
     public void admin_Applies_The_Cancel_Action() {
-        leaveListPage.clickDropdownAction();
-        leaveListPage.clickSaveButton();
+        leaveListPage.clickResetButton();
     }
 
     @And("search all parameter is checked")
@@ -46,16 +45,11 @@ public class LeaveListStepDefinition {
     @Then("the leave can be viewed")
     public void the_leave_can_be_viewed() {
         AssignLeave = new AssignLeave("");
-        leaveListPage.confirmNameDisplayed(AssignLeave);
-    }
-
-    @Then("the leave is not visible")
-    public void the_leave_is_not_visible(){
-        leaveListPage.nameNotFound();
+        leaveListPage.confirmNameDisplayed();
     }
 
     @Then("the employee leave is now canceled")
     public void the_Employee_Leave_Is_Now_Canceled() {
-
+        leaveListPage.clickSaveButton();
     }
 }

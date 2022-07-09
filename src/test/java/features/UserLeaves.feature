@@ -13,7 +13,6 @@ Feature: Admin uses the leave page for employees
     And search all parameter is checked
     When admin searches for employee leave
     Then the leave can be viewed
-    Then the leave is not visible
 
   @Admin
   Scenario: admin cancels leave for employee

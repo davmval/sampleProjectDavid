@@ -8,7 +8,6 @@ import static utilities.ErrorMsgs.INVALID_CREDENTIALS;
 
 public class LoginPage {
     public static WebDriver driver;
-
     public LoginPage(WebDriver driver) {
         LoginPage.driver = driver;
     }

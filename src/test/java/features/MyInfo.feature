@@ -5,7 +5,7 @@ Feature: Modification of profile details on OrangeHRM Page
     Given admin is on My Info tab
     And admin is on Contact details subsection
     When admin edits details
-    Then saves the editted details
+    Then saves the edited details
 
   @MyInfo
   Scenario: Admin adds immigration information on profile page
@@ -15,9 +15,8 @@ Feature: Modification of profile details on OrangeHRM Page
     Then the immigration details can be viewed
 
   @MyInfo
-  Scenario: admin adds and deletes a language
-    Given admin is on My Info page
-    And admin is on Immigration subsection
+  Scenario: admin adds a language
+    Given admin is on My Info tab
+    And admin is on Qualifications subsection
     When admin adds a new language
-    When admin deletes a language
-    Then the lanague profile is updated
+    Then the language profile is updated

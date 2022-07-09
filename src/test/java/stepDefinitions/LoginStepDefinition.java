@@ -40,6 +40,4 @@ public class LoginStepDefinition {
     public void not_credentials_message_is_show() {
         loginPage.assertingNotEmpty();
     }
-
-
 }

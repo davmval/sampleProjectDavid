@@ -71,7 +71,7 @@ public class AssignLeavePage {
                 .withTimeout(Duration.ofSeconds(10))
                 .pollingEvery(Duration.ofSeconds(1))
                 .ignoring(NoSuchElementException.class);
-        action.moveToElement(element).perform();Thread.sleep(2000);
+        action.moveToElement(element).perform();Thread.sleep(1500);
         wait.until(ExpectedConditions.visibilityOfElementLocated(assignButton)).click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
